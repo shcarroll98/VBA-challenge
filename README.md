@@ -35,12 +35,15 @@ Sub TickerAnalysis()
                 Ticker_Total = Ticker_Total + ws.Cells(I, "G").Value
 
 'Initialize Open and Close Price to get Dollar and Percentage Change
+                
                 OpenPrice = ws.Cells(I + 1, "C")
                 ClosePrice = ws.Cells(I, "F")
 'Calculate dollar and percentage change
+               
                 Dollar_Change = ClosePrice - OpenPrice
                 Percent_Change = Dollar_Change / Cells(2, "C").Value * 100
 'Print values for each symbol from the for loop
+                
                 ws.Cells(Summary_Table_Row, "I").Value = Ticker
                 ws.Cells(Summary_Table_Row, "J").Value = Dollar_Change
                 ws.Cells(Summary_Table_Row, "K").Value = Percent_Change
